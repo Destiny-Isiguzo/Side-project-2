@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    /* || COLORS */
+
+    --TRANSPARENT-WHITE-PARA: hsla(0, 0%, 100%, 0.75);
+    --VERY-LIGHTGRAY: hsl(0, 0%, 95%);
+    --BRIGHT-ORANGE: hsl(31, 77%, 52%);
+    --DARK-CYAN: hsl(184, 100%, 22%);
+    --VERY-DARK-CYAN: hsl(179, 100%, 13%);
+
+    /* || FONTS */
+
+    --BODY-FS: 0.9rem;
+    --HEADER-FF: 'Big Shoulders Display', cursive;
+    --PARAGRAPH-FF: 'Lexend Deca', sans-serif;
+
+    --PARAGRAPH-FW: 400;
+    --HEADER-FW: 700;
+}
+
+body {
+    font-size: var(--BODY-FS);
+    background-color: var(--VERY-LIGHTGRAY);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 17vh auto;
+}
+
+img {
+    padding-bottom: 2rem;
+}
+
+.first__container {
+    background-color: var(--BRIGHT-ORANGE);
+    border-radius: 8px 0px 0px 8px;
+}
+
+.second__container {
+    background-color: var(--DARK-CYAN);
+}
+
+.third__container {
+    background-color: var(--VERY-DARK-CYAN);
+    border-radius: 0px 8px 8px 0px;
+}
+
+.container--header {
+    color: var(--VERY-LIGHTGRAY);
+    font-size: clamp(1.7rem, 21vw, 1.9rem);
+    font-weight: var(--HEADER-FW);
+    font-family: var(--HEADER-FF);
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.container--para {
+    color: var(--TRANSPARENT-WHITE-PARA);
+    font-weight: var(--PARAGRAPH-FW);
+    font-family: var(--PARAGRAPH-FF);
+    padding-bottom: 6.4rem;
+}
+
+.modifier {
+    width: 18rem;
+    height: 29rem;
+    padding: 2.7rem 2.7rem 2.7rem 2.7rem;
+}
+
+button {
+    background-color: var(--VERY-LIGHTGRAY);
+    border: none;
+    border-radius: 25px;
+    text-transform: capitalize;
+    padding: 13px 25px 13px 25px;
+    font-weight: var(--PARAGRAPH-FW);
+    font-family: var(--PARAGRAPH-FF);
+}
+
+.btn1 {
+    color: var(--BRIGHT-ORANGE);
+}
+
+.btn2 {
+    color: var(--DARK-CYAN);
+}
+
+.btn3 {
+    color: var(--VERY-DARK-CYAN);
+}
+
+
+/* a little extra stuff */
+:is(button:hover, button:focus) {
+    transform: translateY(-0.5rem);
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+button:active {
+    border: 2px solid var(--VERY-LIGHTGRAY);
+    color: var(--TRANSPARENT-WHITE-PARA);
+    background-color: transparent;
+}
+
+@media (max-width: 35.9rem) {
+    .main-container {
+        margin: 3rem auto;
+    }
+
+    .first__container {
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .third__container {
+        border-radius: 0px 0px 8px 8px;
+    }
+}
+
+
+@media (min-width: 35.8rem) and (max-width: 55rem) {
+
+    .main-container {
+        margin: 3rem auto;
+    }
+
+    .first__container {
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .third__container {
+        border-radius: 0px 0px 0px 0px;
+    }
+
+}
+
+
+
